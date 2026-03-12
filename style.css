@@ -1,0 +1,103 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #141e30, #243b55);
+    color: white;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.card {
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(12px);
+    padding: 20px;
+    margin-bottom: 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.inputs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+input, select, button {
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    font-size: 14px;
+}
+
+button {
+    background: #00c6ff;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #0072ff;
+}
+
+button.danger {
+    background: #ff4b5c;
+}
+
+button.danger:hover {
+    background: #c82333;
+}
+
+#gantt {
+    display: flex;
+    min-height: 70px;
+    margin-top: 20px;
+    overflow-x: auto;
+}
+
+.block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: black;
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: grow 0.8s forwards;
+}
+
+@keyframes grow {
+    to { transform: scaleX(1); }
+}
+
+#timeline {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th, td {
+    border: 1px solid white;
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background: rgba(255,255,255,0.2);
+}

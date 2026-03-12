@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Advanced Process Scheduling Visualiser</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<div class="container">
+    <h1> Process Scheduling Visualiser</h1>
+
+    <div class="card">
+        <h2>Add Process</h2>
+        <div class="inputs">
+            <input type="text" id="pid" placeholder="Process ID (P1)">
+            <input type="number" id="arrival" placeholder="Arrival Time">
+            <input type="number" id="burst" placeholder="Burst Time">
+            <input type="number" id="priority" placeholder="Priority (Lower = Higher)">
+            <button onclick="addProcess()">Add</button>
+            <button onclick="resetAll()" class="danger">Reset</button>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>Select Algorithm</h2>
+        <select id="algorithm">
+            <option value="fcfs">FCFS</option>
+            <option value="sjf">SJF (Non-Preemptive)</option>
+            <option value="priority">Priority Scheduling</option>
+            <option value="rr">Round Robin</option>
+        </select>
+        <input type="number" id="quantum" placeholder="Time Quantum (RR)">
+        <button onclick="runAlgorithm()">Run Simulation</button>
+    </div>
+
+    <div class="card">
+        <h2>Animated Gantt Chart</h2>
+        <div id="gantt"></div>
+        <div id="timeline"></div>
+    </div>
+
+    <div class="card">
+        <h2>Performance Table</h2>
+        <div id="result"></div>
+    </div>
+
+    <div class="card">
+        <h2>Performance Graph</h2>
+        <canvas id="chart"></canvas>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
